@@ -1,6 +1,6 @@
 {
   "name": "yiqing-auto",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "自动提醒疫情打卡，仅供学习交流使用",
   "main": "app.js",
   "scripts": {
@@ -11,13 +11,12 @@
     "url": "https://github.com/hsmustard/yiqing-auto"
   },
   "author": "Mustard",
-  "license": "MIT",
+  "license": "Apache2.0",
   "bugs": {
     "url": "https://github.com/hsmustard/yiqing-auto/issues"
   },
   "homepage": "https://github.com/hsmustard/yiqing-auto#readme",
   "dependencies": {
-    "axios": "^0.21.0",
-    "cheerio": "^1.0.0-rc.3"
+    "axios": "^0.21.0"
   }
 }
