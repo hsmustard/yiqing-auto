@@ -1,12 +1,25 @@
-# 自动打卡（提醒）工具
-> 仅供学习交流使用，请勿用于正式环境
+<div align="center"> 
+<h1 align="center">
+自动打卡（提醒）工具
+</h1>
+
+[![GitHub stars](https://img.shields.io/github/stars/hsmustard/yiqing-auto?style=flat-square)](https://github.com/hsmustard/yiqing-auto/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/hsmustard/yiqing-auto?style=flat-square)](https://github.com/hsmustard/yiqing-auto/network)
+[![GitHub issues](https://img.shields.io/github/issues/hsmustard/yiqing-auto?style=flat-square)](https://github.com/hsmustard/yiqing-auto/issues)
+[![GitHub license](https://img.shields.io/github/license/hsmustard/yiqing-auto?style=flat-square)](https://github.com/hsmustard/yiqing-auto/blob/main/LICENSE) 
+[![GitHub All Releases](https://img.shields.io/github/downloads/hsmustard/yiqing-auto/total?style=flat-square)](https://github.com/hsmustard/yiqing-auto/releases)
+[![GitHub contributors](https://img.shields.io/github/contributors/hsmustard/yiqing-auto?style=flat-square)](https://github.com/hsmustard/yiqing-auto/graphs/contributors)
+
+</div>
+
+## 工具简介 
+这是一个利用GitHub Action定时任务实现每日自动打卡、确认的工具。仅供学习交流使用，请每天自觉认真打卡。
 
 ## 使用步骤
 ### 0.首先，如果您没有github账户，您需要先注册一个。
 
-
 ### 1.star & fork 本项目 
-![fork本项目于](http://www.s3tu.com/images/2020/10/27/fork82304.png)
+![fork本项目于](https://s1.ax1x.com/2020/10/28/B1uyWV.png)
 
 ## 1.1 开启Actions (新用户才操作)
   - 点击Action，再点击I understand my workflows, go ahead and enable them
