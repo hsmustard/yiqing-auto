@@ -8,8 +8,8 @@ on:
     branches: [ master ]
   workflow_dispatch:
   schedule:
-    - cron: '13 22 * * *'
-    # 每天早上6:10
+    - cron: '16 16 * * *'
+    # 每天00:16
 
 jobs:
   build:
