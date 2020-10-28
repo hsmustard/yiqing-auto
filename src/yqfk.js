@@ -20,7 +20,7 @@ async function autoSubmit(info, token, wxToken) {
             console.log('INFO: 发送打卡成功微信通知')
             await request.post('https://msg.hsmus.top/notice/' + wxToken, {
                 title: '自动打卡: 打卡成功,' + res.data.message,
-                content: res.data.message,
+                content: res.data.message ,
                 redirectUrl: 'https://yqfk.dgut.edu.cn/loading?access_token=' + token.slice('Bearer '.length)
             })
         } else {
@@ -28,7 +28,7 @@ async function autoSubmit(info, token, wxToken) {
             console.log('INFO: 发送打卡失败微信通知')
             await request.post('https://msg.hsmus.top/notice/' + wxToken, {
                 title: '自动打卡: 打卡失败,' + res.data.message,
-                content: res.data.message,
+                content: res.data.message ,
                 redirectUrl: 'https://yqfk.dgut.edu.cn/loading?access_token=' + token.slice('Bearer '.length)
             })
         }
@@ -48,8 +48,7 @@ async function getTokenAndInfo(redirectUrl, wxToken) {
         console.log('INFO: ' + dangerArea)
         await request.post('https://msg.hsmus.top/notice/' + wxToken, {
             title: '自动打卡: 基本信息获取成功,' + info['msg'],
-            content: info['whitelist']['message'] + ', ' + dangerArea,
-            redirectUrl: 'https://yqfk.dgut.edu.cn/loading?access_token=' + token.slice('Bearer '.length)
+            content: info['whitelist']['message'] + ', ' + dangerArea
         })
     }
     return {info, token}

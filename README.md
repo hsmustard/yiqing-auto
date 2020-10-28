@@ -4,10 +4,15 @@
 ## 使用步骤
 ### 0.首先，如果您没有github账户，您需要先注册一个。
 
-新账号在使用时可能会失败，解决方案还没写……
 
 ### 1.star & fork 本项目 
 ![fork本项目于](http://www.s3tu.com/images/2020/10/27/fork82304.png)
+
+## 1.1 开启Actions (新用户才操作)
+  - 点击Action，再点击I understand my workflows, go ahead and enable them
+
+![开启Actions](https://s1.ax1x.com/2020/10/28/B1Ax2Q.png)
+
 
 ### 2. 创建Secret
 
@@ -17,6 +22,8 @@
  >  3. 获取WX_TOKEN(如：`https://msg.hsmus.top/notice/xxxxxxxxx` 中的 `xxxxxxxx` 即为 `WX_TOKEN` )
 
  ![创建Secret](https://s1.ax1x.com/2020/10/27/BlrQkq.png)
+
+
 
 ### 3. 修改打卡时间（可选操作，建议尽量修改，以免大家挤在同一时间导致失败）
 
