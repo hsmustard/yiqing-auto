@@ -30,7 +30,7 @@ async function _loginCasAndYqfk(loginInfo, callback, wxToken) {
         }, 2000)
         return null
     }
-    console.log("信息获取成功", info.name, token.slice(0, 8))
+    console.log("信息获取成功", info.msg, token.slice(0, 10))
     try {
         callback && await callback(info, token, wxToken)
     } catch (e) {

@@ -28,7 +28,7 @@ async function getCasLoginToken(loginInfo) {
 async function _getCasTokenAndCookies() {
     const casRes = await request.get("https://cas.dgut.edu.cn/home/Oauth/getToken/appid/illnessProtectionHome/state/home.html")
     const token = /var token = "\w{32}/.exec(casRes.data)[0].slice('var token = "'.length)
-    console.log('INFO: cas token 获取成功：' + token)
+    console.log('INFO: cas token 获取成功：' + token.slice(3, 8))
     return {
         token,
         cookies: casRes.headers['set-cookie']

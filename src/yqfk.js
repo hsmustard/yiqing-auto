@@ -7,13 +7,13 @@ const request = require('../utils/request')
 async function autoSubmit(info, token, wxToken) {
     // console.log(info, token)
     const postData = _assemblePostData(info)
-    console.log("postData" + postData)
+    // console.log("postData" + postData)
     const res = await request.post('https://yqfk.dgut.edu.cn/home/base_info/addBaseInfo', postData, {
         headers: {
             authorization: token
         }
     })
-    console.log(res)
+    console.log(res.data)
     if (res.data.hasOwnProperty('code')) {
         if (res.data.code === 200) {
             // 打卡成功
@@ -118,7 +118,7 @@ async function _getYqfkAuthorizationToken(requestUrl) {
     }
     await request.get(headers['location']) // 访问一下防止出现401
     const token = 'Bearer ' + /[?&]?access_token=[\w.]+[\\&]?/.exec(headers['location'])[0].split('=')[1]
-    console.log('INFO: 获取疫情防控问卷token成功 ' + token)
+    console.log('INFO: 获取疫情防控问卷token成功 ' + token.slice(0, 10))
     return token
 }
 
