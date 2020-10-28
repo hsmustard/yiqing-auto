@@ -6,10 +6,9 @@ name: Node.js CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
   schedule:
-    - cron: '05 9 * * *' 
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '20 7 * * *'
 
 jobs:
   build:
