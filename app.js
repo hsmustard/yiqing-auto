@@ -31,7 +31,14 @@ async function _loginCasAndYqfk(loginInfo, callback, wxToken) {
         return null
     }
     console.log("信息获取成功", info.name, token.slice(0, 8))
-    callback && await callback(info, token, wxToken)
+    try {
+        callback && await callback(info, token, wxToken)
+    } catch (e) {
+        // 如果打卡失败了 就重新整
+        console.log("ERROR: 打卡失败了 重新整")
+        return await _loginCasAndYqfk(loginInfo, callback, wxToken);
+    }
+
     return {
         info, token
     }

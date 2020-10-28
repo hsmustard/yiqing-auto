@@ -66,10 +66,10 @@ function _assemblePostData(info) {
     delete (postData.msg)
     delete (postData.name)
     delete (postData.whitelist)
-    if (postData.important_area && postData.important_area.length === 0) {
+    if (postData.important_area.length === 0) {
         postData.important_area = null
     }
-    if (postData.important_area && postData.current_region.length === 0) {
+    if (postData.current_region.length === 0) {
         postData.current_region = null
     }
     return postData
