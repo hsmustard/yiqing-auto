@@ -7,8 +7,8 @@ on:
   push:
     branches: [ master ]
   workflow_dispatch:
-  schedule:
-    - cron: "40 16 * * *"
+  #schedule:
+  #  - cron: "40 16 * * *"
     # 每天00:40
 
 jobs:
