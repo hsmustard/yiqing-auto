@@ -1,0 +1,14 @@
+{
+  "triggers": [
+    {
+      "name": "firstTrigger",
+      "type": "timer",
+      "config": "0 41 00 * * * *"
+    },
+    {
+      "name": "secondTrigger",
+      "type": "timer",
+      "config": "0 16 06 * * * *"
+    }
+  ]
+}
