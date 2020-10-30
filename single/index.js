@@ -30,9 +30,14 @@ const Yqfk = {
      * */
     async autoSubmit(info, token, wxToken) {
         // console.log(info, token)
+        await request.get('http://yqfk.dgut.edu.cn/home/base_info/getGPSAddress?longitude=113.86965&latitude=22.90167&reject=1', {
+            headers: {
+                authorization: token
+            }
+        })
         const postData = Yqfk._assemblePostData(info)
         // console.log("postData" + postData)
-        const res = await request.post('https://yqfk.dgut.edu.cn/home/base_info/addBaseInfo', postData, {
+        const res = await request.post('http://yqfk.dgut.edu.cn/home/base_info/addBaseInfo', postData, {
             headers: {
                 authorization: token
             }
@@ -45,7 +50,7 @@ const Yqfk = {
                 await request.post('https://msg.hsmus.top/notice/' + wxToken, {
                     title: '自动打卡: 打卡成功,' + res.data.message,
                     content: res.data.message,
-                    redirectUrl: 'https://yqfk.dgut.edu.cn/loading?access_token=' + token.slice('Bearer '.length)
+                    redirectUrl: 'http://yqfk.dgut.edu.cn/loading?access_token=' + token.slice('Bearer '.length)
                 })
             } else {
                 // 打卡失败
@@ -53,7 +58,7 @@ const Yqfk = {
                 await request.post('https://msg.hsmus.top/notice/' + wxToken, {
                     title: '自动打卡: 打卡失败,' + res.data.message,
                     content: res.data.message,
-                    redirectUrl: 'https://yqfk.dgut.edu.cn/loading?access_token=' + token.slice('Bearer '.length)
+                    redirectUrl: 'http://yqfk.dgut.edu.cn/loading?access_token=' + token.slice('Bearer '.length)
                 })
             }
         }
@@ -99,7 +104,7 @@ const Yqfk = {
     },
 
     async _getDangerArea(token) {
-        const {data} = await request.get('https://yqfk.dgut.edu.cn/home/base_info/getImportantArea', {
+        const {data} = await request.get('http://yqfk.dgut.edu.cn/home/base_info/getImportantArea', {
             headers: {
                 authorization: token
             }
@@ -116,7 +121,7 @@ const Yqfk = {
 
     async _getBaseInfo(token) {
         try {
-            const {data} = await request.get('https://yqfk.dgut.edu.cn/home/base_info/getBaseInfo', {
+            const {data} = await request.get('http://yqfk.dgut.edu.cn/home/base_info/getBaseInfo', {
                 headers: {
                     authorization: token
                 }

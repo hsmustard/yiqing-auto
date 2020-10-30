@@ -5,6 +5,11 @@
 const request = require('../utils/request')
 
 async function autoSubmit(info, token, wxToken) {
+    await request.get('https://yqfk.dgut.edu.cn/home/base_info/getGPSAddress?longitude=113.86965&latitude=22.90167&reject=1', {
+        headers: {
+            authorization: token
+        }
+    })
     // console.log(info, token)
     const postData = _assemblePostData(info)
     // console.log("postData" + postData)
@@ -92,7 +97,7 @@ async function _getDangerArea(token) {
 
 async function _getBaseInfo(token) {
     try {
-        const {data} = await request.get('https://yqfk.dgut.edu.cn/home/base_info/getBaseInfo', {
+        const {data} = await request.get('http://yqfk.dgut.edu.cn/home/base_info/getBaseInfo', {
             headers: {
                 authorization: token
             }
