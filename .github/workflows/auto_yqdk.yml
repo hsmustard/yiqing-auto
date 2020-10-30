@@ -9,7 +9,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "22 16 * * *"
-    # 每天00:40
 
 jobs:
   build:
